@@ -1,4 +1,4 @@
-var express = require('express');
+/*var express = require('express');
 var app = express();
 
 var bodyParser = require('body-parser');
@@ -13,3 +13,8 @@ require ("./test/app.js")(app);
 var port = process.env.PORT || 3000;
 
 app.listen(port);
+*/
+var exp = require('express');
+var app = exp();
+app.use(exp.static(__dirname+'/public'));
+app.listen(3000);
