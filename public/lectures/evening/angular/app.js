@@ -3,7 +3,18 @@
         .module('BlogApp',[])
         .controller("BlogPostListController",BlogPostListController);
     function BlogPostListController($scope) {
-        $scope.hello = 'hello world'
-        $scope.title = $scope.title + "balle"
+        $scope.hello = 'Hello World!!!';
+        $scope.posts = [];
+        $scope.addPost = function (post) {
+
+            var newPost = {
+                title: post.title,
+                body: post.body,
+                date: new Date()
+            };
+            $scope.posts.push(newPost);
+
+            console.log($scope.posts);
+        }
     }
 })();
